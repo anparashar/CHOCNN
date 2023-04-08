@@ -1,6 +1,6 @@
 import numpy as np
 from copy import deepcopy
-import utils
+import CHOCNN.utils
 import keras.backend
 import tensorflow as tf
 from tensorflow.python.keras.models import Model, Sequential
