@@ -61,21 +61,21 @@ class Particle:
     def initialization(self):
       if self.p0 == 0 :
         # particle0 ,block1
-        self.layers = utils.add_convinit(self.layers, 64,3)
-        self.layers = utils.add_convinit(self.layers, 64,3)
-        self.layers = utils.add_poolinit(self.layers)
+        self.layers = add_convinit(self.layers, 64,3)
+        self.layers = add_convinit(self.layers, 64,3)
+        self.layers = add_poolinit(self.layers)
 
-        self.layers = utils.add_convinit(self.layers, 128,3)
-        self.layers = utils.add_convinit(self.layers, 128,3)
-        self.layers = utils.add_poolinit(self.layers)
+        self.layers = add_convinit(self.layers, 128,3)
+        self.layers = add_convinit(self.layers, 128,3)
+        self.layers = add_poolinit(self.layers)
         
-        self.layers = utils.add_convinit(self.layers, 256,3)
-        self.layers = utils.add_convinit(self.layers, 256,3)
-        self.layers = utils.add_poolinit(self.layers)
+        self.layers = add_convinit(self.layers, 256,3)
+        self.layers = add_convinit(self.layers, 256,3)
+        self.layers = add_poolinit(self.layers)
 
          
-        self.layers = utils.add_fc(self.layers, self.max_fc_neurons)
-        self.layers = utils.add_fc(self.layers, self.output_dim) 
+        self.layers = add_fc(self.layers, self.max_fc_neurons)
+        self.layers = add_fc(self.layers, self.output_dim) 
 
       else:
 
