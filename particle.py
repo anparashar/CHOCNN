@@ -2,15 +2,15 @@ import numpy as np
 from copy import deepcopy
 import keras.backend
 import tensorflow as tf
-from tensorflow.python.keras.models import Model, Sequential
-from tensorflow.python.keras.layers import Input, Add, Dense, Dropout, Flatten
-from tensorflow.python.keras.layers import Activation, Conv2D, MaxPooling2D, AveragePooling2D
-from tensorflow.python.keras.layers.advanced_activations import LeakyReLU
-from tensorflow.python.keras.layers.advanced_activations import ReLU
+from keras.models import Model, Sequential
+from keras.layers import Input, Add, Dense, Dropout, Flatten
+from keras.layers import Activation, Conv2D, MaxPooling2D, AveragePooling2D
+from keras.layers.advanced_activations import LeakyReLU
+from keras.layers.advanced_activations import ReLU
 from keras import regularizers 
 from keras.optimizers import Adam, Nadam
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.layers import BatchNormalization
+from keras.preprocessing.image import ImageDataGenerator
+from keras.layers import BatchNormalization
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
 
