@@ -10,8 +10,8 @@ from tensorflow.python.keras.layers.advanced_activations import LeakyReLU
 from tensorflow.python.keras.layers.advanced_activations import ReLU
 from keras import regularizers 
 from keras.optimizers import Adam, Nadam
-from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.python.keras.layers.normalization import BatchNormalization
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.layers import BatchNormalization
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
 
