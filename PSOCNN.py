@@ -3,7 +3,7 @@ from keras.datasets import mnist
 from keras.datasets import fashion_mnist
 from keras.datasets import cifar10
 import keras.backend
-from population import Population
+from CHOCNN.population import Population
 import numpy as np
 from copy import deepcopy
 import os
