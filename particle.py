@@ -1,6 +1,5 @@
 import numpy as np
 from copy import deepcopy
-import CHOCNN.utils
 import keras.backend
 import tensorflow as tf
 from tensorflow.python.keras.models import Model, Sequential
@@ -16,7 +15,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
 
 
-## Utils 
+## utils
 import numpy as np
 from copy import deepcopy
 
@@ -201,20 +200,20 @@ class Particle:
       else:
 
         for i in range(1, 4):
-          self.layers = utils.add_conv(self.layers, self.max_out_ch, self.max_conv_kernel)
-          self.layers = utils.add_conv(self.layers, self.max_out_ch, self.max_conv_kernel)
-          self.layers = utils.add_pool(self.layers, self.max_pool_kernel)
+          self.layers = add_conv(self.layers, self.max_out_ch, self.max_conv_kernel)
+          self.layers = add_conv(self.layers, self.max_out_ch, self.max_conv_kernel)
+          self.layers = add_pool(self.layers, self.max_pool_kernel)
          
-        self.layers = utils.add_fc(self.layers, self.max_fc_neurons) 
-        self.layers = utils.add_fc(self.layers, self.output_dim)   
+        self.layers = add_fc(self.layers, self.max_fc_neurons) 
+        self.layers = add_fc(self.layers, self.output_dim)   
             
     
 
     def velocity(self, gBest):
-        self.vel = utils.computeVelocity(gBest, self.pBest.layers, self.layers)
+        self.vel = computeVelocity(gBest, self.pBest.layers, self.layers)
 
     def update(self):
-        new_p = utils.updateParticle(self.layers, self.vel)
+        new_p = updateParticle(self.layers, self.vel)
         # new_p = self.validate(new_p)
         self.layers = new_p
         self.model = None
